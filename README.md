@@ -8,13 +8,18 @@ enforced) details.
 
 #How_to_use
 After cloning the files do an 'npm install' which gets all the required dependencies.
-To start the service : 'node index.js' , 
+
+To start the service : 'node index.js' .
+
 If the server starts running you can hit the API at : 'http://localhost:3000/getRequestCount'.
+
 To run tests do an 'npm test'.
 
 #Rate_Limiting_Algorithm
 we have used TOKEN BUCKET algorithm ,we assign tokens on a user level. For a given time duration d, the number of request 'r' that a user can receive is defined. Every time a new request arrives at a server, there are two operations that happen:
+
 1.we will fetch the token count
+
 2.we will update the token count
 
 This algorithm is memory efficient because we are saving less data per user for our application.
